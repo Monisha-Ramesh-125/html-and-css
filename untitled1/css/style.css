@@ -1,87 +1,78 @@
-h1,h4{
-  color : orange;
-
-
-  /*serif is generic name */
+body{
+  font-family: Georgia,'Times New Roman',Serif;
+  /*1 px = 1/125 of the inch*/
+  /*font-size: 10px;     !*default size is 16px*!*/
+  font-size: 1.5em;   /*1em =16px*/
 }
-h1{
-  color: violet;
-}
-h4{
-  color: black;
-}
+h2 {
+  font-size: 75%; /* 75 % of 16 px is 12 px*/
+  font-size: 2em;
+  /*em is relative already body la 24px nnu calculate anathula erunthu double aitu 48px ah kamikkum */
+  /*hete 1 em = body la erukka 1.5 em*/
+  /*parent oda size ah vechu pannum parent kku ellaina ancestor antha mari poitae erukkum*/
 
-/* kadaisiya yenna solramo athatha atha eduthukkom here h1 is violet */
-
-/* always inline css takes more priority */
-*{   /* it is applied to all tags.But specific ah yethavathu kuduthuronna atha tha priority ah edukkm */
-  color: blue;
 }
 
-/* still h1 is violet because specific ah erukkarathu than priority */
-#dev,#learning{
-  color: green;
-}
-.class1{
-  color: orange;
-}
-
-/* child selector */
-
-/* div oda child para */
-div>p{
-  color: black;
-}
-
-/* descendent selector  */
-/* div ku keela a descendent */
-div a{
-  color: aquamarine;
-}
-
-/* sibling selector */
-/* both have same parent.they are under the parent */
-
-
-/*it is moew specific than above said so this color is taken for h4*/
-h1~h4{
-  color: aqua;
-}
-
-
-/* adjacent sibling selector  */
-/* it is appluedonly if h1 and h4 are siblings and they are adjacent to each other */
-h1+h3{
-  color: green;
-}
-
-h4{
-  color: black !important;
-  /*there is no priority this rule is applied irrespectively*/
-}
-
-/*color explanation*/
-
-/*we can rgb value to color */
-/*the number range is 0 to 255*/
+/*font weight ---> light,medium,bold,black*/
+/*font style ---->normal,italic,oblique*/
+/*font stretch ---->condensed,regular,extended*/
 
 h3{
-  color: rgb(255,255,255);/*white*/
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: expanded;
+  text-transform:  capitalize;  /*1 st word of each letter is caps*/
+  text-decoration: overline;
+  /*text-decoration-none is use in where defaulty th link is underlined if we want no underline then we put none there*/
+  text-align: center;
+  /*vertical-align: center;*/
+  /*box kkula text enga varanum or image kku pakkathul text varuthuna then top la or middle la varanumannu pakka */
+}
+p{
+  line-height: 1.5em;
+  /*letter-spacing: 0.5em;*/
+  /*word-spacing: 0.5em;*/
+text-align: justify;
+  /*text align will align the para at the end*/
+  text-indent: 50px;
+  /*1 st word evlo thoooram naganthu varanum*/
+  text-shadow: 2px 2px 2px grey;
+  /*1 st value left or right evlo thoram shadow varanum */
+  /*2 nd value is vertival*/
+  /*3 rd value is evlo blur venum*/
 
 }
-h5{
-  color: rgb(70, 97, 150);
+p:first-letter{
+  /*we can also use p:first line*/
+  font-size: 2em;
 }
-h6{
-  color: #888888;
-  color: hsl(100,33%,44%);
+a:visited{
+  color: brown;
 }
-/*100 % white 0% white*/
-
-h4{
-  background: rgb(255,0,0);
-}
-h4{
-  background: rgba(255,0,0,0.5);  /* 4 th value is opacity*/
+a:hover{
+  color: pink;
 }
 
+a:active{
+  color:blue;
+}
+p.myclass{
+
+/*myclass nnu class erukka para*/
+}
+
+p[class]{
+  /*class nnu attribute erukka paragraphs or p[id] or anything*/
+}
+p[id='id1']{
+
+}
+p[class~="myclass"]{
+  /*if the para have so many class name then if we want to use the property if the class have my class as a name */
+}
+p[class^=m]{
+  /*select all para if the class startswith m*/
+}
+p[class$=p]{
+  /*select all para if the class endswith p*/
+}
