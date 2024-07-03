@@ -11,6 +11,9 @@ h2 {
   /*hete 1 em = body la erukka 1.5 em*/
   /*parent oda size ah vechu pannum parent kku ellaina ancestor antha mari poitae erukkum*/
 
+  border : 1px solid black
+  /* heading a suthi intha  mari erukku...namma border kudathatha pakka mudiyum */
+
 }
 
 /*font weight ---> light,medium,bold,black*/
@@ -40,7 +43,72 @@ text-align: justify;
   /*1 st value left or right evlo thoram shadow varanum */
   /*2 nd value is vertival*/
   /*3 rd value is evlo blur venum*/
+  border : 1px solid black;
+  /*we can separete ebve three parametres as */
+  /*border-width: 4px;*/
+  /*border-style: solid;*/
+  /*border-color: aqua;*/
+/*we can give the each side separately*/
+/*  border-top-width: thick;*/
+/*!*border-width: 2px 2px 2px 2px;*! top right botttom left*/
+ padding: 15px; /* border kku text kku ulla  gap*/
+  /*margin: 20px ; !*border kku athuku pakkathula or athukku velila erukka element kku naduvula erukka gap than margin*!*/
+margin: 20px auto 20px auto;  /*left and right kku mattu auto kuduthurukkom athuvae calculate pannikum center ah vanthukkum*/
+  /*padding margin parent to child la inheri agathu..but font family and font size la inherit agum*/
 
+  /*width : 300px;*/
+  height: 400px;
+  background-color: aqua;
+ /*width:50%; !* brower window oda width la 50% eduthukkum*!*/
+  /* suppose intha para already oru parent kkula erukkuna then antha parent base panni tha percentage kanakkula eduthukkum(see below wxample paradiv) */
+
+max-width: 1200px;
+  /*inths size kku mela pogama pathukkum*/
+  min-width: 300px;
+  max-height: 100px;
+   /*height ah thandi box kku veliyah text display achuna overflow scroll kuduthu scrollable ah aikkikalam*/
+  overflow: scroll;
+
+  min-height: 100px;
+
+  /*we can give max height and min height also*/
+
+
+
+  /*width : 300px intha mari kudutha screen perusu analu 300 x tha erukkum so max width and min width kudukkalam;*/
+
+  /*width 300 px meand it does not include padding margin border it includes only content length*/
+
+  /*if we want round border*/
+  /*border-radius: 3px;*/
+  /*we will get rounded corner*/
+/*border-radius: 80px 50px;*/
+/*  box-shadow: 10px 10px 5px grey;*/
+
+  /*box shadow la inset nnu kudukkalam appadi kudutha shadow ulla varum or negative la kudukkalam*/
+border-image: url("../icon.png") 30 stretch;
+}
+
+
+.paradiv{
+  width: 500px;
+  border: 1px solid blue;
+}
+
+li{
+  display: inline;
+  /*display none kudutha display agathu*/
+  /*if we want new line then we put display block*/
+  /*navigation bar is designed using this*/
+  margin: 10px;
+}
+
+.coming-soon{
+  display: none;
+  /*space will be occupied by another element*/
+  /*or*/
+  visibility: collapse;
+  /*space will be empty*/
 }
 p:first-letter{
   /*we can also use p:first line*/
