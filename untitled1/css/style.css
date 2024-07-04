@@ -1,87 +1,43 @@
-h1,h4{
-  color : orange;
+ul{
+   /* list-style-type: circle;*/
+   /* !*list-style-image: url("../icon.png");*!*/
+   /*list-style-position: outside;*/
 
 
-  /*serif is generic name */
-}
-h1{
-  color: violet;
-}
-h4{
-  color: black;
+    /*both the above styles in one property in css*/
+
+    list-style: inside circle;
 }
 
-/* kadaisiya yenna solramo athatha atha eduthukkom here h1 is violet */
-
-/* always inline css takes more priority */
-*{   /* it is applied to all tags.But specific ah yethavathu kuduthuronna atha tha priority ah edukkm */
-  color: blue;
+ol{
+    list-style-type: lower-alpha;
 }
 
-/* still h1 is violet because specific ah erukkarathu than priority */
-#dev,#learning{
-  color: green;
-}
-.class1{
-  color: orange;
+li{
+    margin: 10px;
 }
 
-/* child selector */
-
-/* div oda child para */
-div>p{
-  color: black;
+table{
+    width: 300px;
+    margin: auto; /* it will center based on parent */
+    border-spacing: 10px;
+    border-collapse: collapse;  /*normal table*/
+    /*border spacing will be ognored when we collapse*/
 }
 
-/* descendent selector  */
-/* div ku keela a descendent */
-div a{
-  color: aquamarine;
+th{
+    text-transform: uppercase;
+    border-bottom: 2px solid black;
+    text-align: left;
+    padding: 10px;
 }
-
-/* sibling selector */
-/* both have same parent.they are under the parent */
-
-
-/*it is moew specific than above said so this color is taken for h4*/
-h1~h4{
-  color: aqua;
+th,td{
+    padding: 10px;
+    border: 2px solid black;
 }
-
-
-/* adjacent sibling selector  */
-/* it is appluedonly if h1 and h4 are siblings and they are adjacent to each other */
-h1+h3{
-  color: green;
+.amt{
+    text-align: right;
 }
-
-h4{
-  color: black !important;
-  /*there is no priority this rule is applied irrespectively*/
+tr:nth-child(even){
+    background-color: whitesmoke;
 }
-
-/*color explanation*/
-
-/*we can rgb value to color */
-/*the number range is 0 to 255*/
-
-h3{
-  color: rgb(255,255,255);/*white*/
-
-}
-h5{
-  color: rgb(70, 97, 150);
-}
-h6{
-  color: #888888;
-  color: hsl(100,33%,44%);
-}
-/*100 % white 0% white*/
-
-h4{
-  background: rgb(255,0,0);
-}
-h4{
-  background: rgba(255,0,0,0.5);  /* 4 th value is opacity*/
-}
-
